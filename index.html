@@ -20,17 +20,17 @@
 	<!-- FONT AWESOME -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
-<body>
+<body id="top">
 
-	<nav class="container fixed-top">
+	<nav class="container-fluid fixed-top">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="d-flex justify-content-around">
-					<div class="p-2 active">About</div>
-					<div class="p-2">Skills</div>
-					<div class="p-2 logo">Duma</div>
-					<div class="p-2">Works</div>
-					<div class="p-2">Contact</div>
+					<div class="p-2 active"><a class="link scroll" href="#about">About</a></div>
+					<div class="p-2"><a class="link scroll" href="#services">Services</a></div>
+					<div class="p-2"><a class="link scroll" href="#skills">Skills</a></div>
+					<div class="p-2"><a class="link scroll" href="#works">Works</a></div>
+					<div class="p-2" id="contactlink"><a class="link scroll" href="#contact">Contact</a></div>
 				</div>
 			</div>
 		</div>
@@ -46,7 +46,10 @@
 				<h2>Web Developer</h2>
 			</div>
 			<div class="downBtn">
-				<a class="link" href="#">Learn More</a>
+				<a class="link scroll learnMoreBtn active" href="#about">
+					<img src="assets/images/down.svg" height="20px">
+				</a>
+				
 			</div>
 			
 		</div>
@@ -55,10 +58,11 @@
 
 
 	<!-- About -->
-	<section class="container">
+	<section class="container" id="about">
 		<div class="row">
 			<div class="col-12 text-center">
-				<h2>About</h2>
+				<h2 class="lg-font">About</h2>
+				<hr>
 			</div>
 			<div class="col-12 d-flex justify-content-center pt-5 pb-5">
 				<img class="avatar" height="200px" width="200px" src="assets/images/me.jpg">
@@ -86,47 +90,50 @@
 				<a href="https://drive.google.com/file/d/1f0uIJ4rtVc0pbdZTQVcuqCVLrqVU8yc7/view?usp=sharing"><button class="btn btn-primary roundbtn">View Resume <img class="ml-2" height="20px" src="assets/images/download.svg"></button></a>
 			</div>
 
-			<div class="col-12 text-center">
-				<h2 class="">Services</h2>
-			</div>
-
-			<div class="row offwhite p-3">
-			    <div class="col-lg-4 col-md-4 text-center">
-				    <div class=" mt-5 mx-auto">
-				        <img height="50px" src="assets/images/restful-api-develoment.svg">
-				        <h3 class="mb-3">Web Development</h3>
-				        <p class="text-muted mb-0">Junior Web developer who focuses on writing clean, readable and efficient code.</p>
-				    </div>
-			    </div>
-			    <div class="col-lg-4 col-md-4 text-center">
-				    <div class=" mt-5 mx-auto">
-				        <img height="50px" src="assets/images/responsive-web-develoment.svg">
-				        <h3 class="mb-3">Responsive Web Design</h3>
-				        <p class="text-muted mb-0">I'll make your website beautiful in all types of devices and screen sizes.</p>
-				    </div>
-			    </div>
-			    <div class="col-lg-4 col-md-4 text-center">
-				    <div class="mt-5 mx-auto">
-				        <img height="50px" src="assets/images/e-commerce-web-develoment.svg">
-				        <h3 class="mb-3">E-commerce</h3>
-				        <p class="text-muted mb-0">Let me help your growing business by attracting more customers through the Web.</p>
-				    </div>
-			    </div>
-			</div>
-
-
 		</div>
 		
 	</section>
 
 
-	<section class="container">
+	<section class="container" id="services">
+		<div class="col-12 text-center" >
+			<h2 class="">Services</h2>
+
+		</div>
+
+		<div class="row offwhite p-3">
+		    <div class="col-lg-4 col-md-4 text-center">
+			    <div class=" mt-5 mx-auto">
+			        <img height="50px" src="assets/images/restful-api-develoment.svg">
+			        <h3 class="mb-3">Web Development</h3>
+			        <p class="text-muted mb-0">Junior Web developer who focuses on writing clean, readable and efficient code.</p>
+			    </div>
+		    </div>
+		    <div class="col-lg-4 col-md-4 text-center">
+			    <div class=" mt-5 mx-auto">
+			        <img height="50px" src="assets/images/responsive-web-develoment.svg">
+			        <h3 class="mb-3">Responsive Web Design</h3>
+			        <p class="text-muted mb-0">I'll make your website beautiful in all types of devices and screen sizes.</p>
+			    </div>
+		    </div>
+		    <div class="col-lg-4 col-md-4 text-center">
+			    <div class="mt-5 mx-auto">
+			        <img height="50px" src="assets/images/e-commerce-web-develoment.svg">
+			        <h3 class="mb-3">E-commerce</h3>
+			        <p class="text-muted mb-0">Let me help your growing business by attracting more customers through the Web.</p>
+			    </div>
+		    </div>
+		</div>
+	</section>
+
+	<section class="container" id="skills">
 		<div class="row">
 
 			<div class="col-12 text-center">
 				<h2>Skills</h2>
+				<hr>
 			
-				<div class="row mt-3 pt-3">
+				<div class="row mt-5 pt-3">
 					<div class="col-12 d-flex justify-content-center mb-4">
 						<img class="float-left m-3 skillImg" height="100px" src="assets/images/HTML5_logo_and_wordmark.svg">
 						<img class="float-left m-3 skillImg" height="100px" src="assets/images/CSS.3.svg">
@@ -160,49 +167,48 @@
 	</section>
 
 
-	<section class="container">
+	<section class="container" id="works">
 		<div class="row">
 			<div class="col-12 text-center mb-5">
 				<h2>Works</h2>
+				<hr>
 			</div>
 
-			<div class="col-lg-4 col-12 mb-3">
+			<div class="col-lg-6 col-12 mb-3">
 				<div class="card">
 					<img class="card-img-top" src="assets/images/clearout.jpg" alt="Card image cap">
 					<div class="card-body">
-						Clear-out
+						<h3>Clear-out</h3>
+						<p>A basic HTML, CSS and Bootstrap Website project.</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-12 mb-3">
+			<div class="col-lg-6 col-12 mb-3">
 				<div class="card">
 					<img class="card-img-top" src="assets/images/jnp.jpg" alt="Card image cap">
 					<div class="card-body">
-						Jack N' Poy Game
+						<h3>Jack N' Poy Game</h3>
+						<p>A simple Rock, Paper, Scissor Browser game made using HTML, CSS and Javascript </p>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-12 mb-3">
+			<div class="col-lg-6 col-12 mb-3">
 				<div class="card">
 					<img class="card-img-top" src="assets/images/dumashoes.jpg" alt="Card image cap">
 					<div class="card-body">
-						Dumashoes
+						<h3>Dumashoes</h3>
+						<p>An E-commerce website for leather shoes and bags with simple and elegant design for men.</p>
+						<p>Made using HTML, CSS, Jquery, PHP and MySQL</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 offset-lg-2 col-12 mb-3">
+			<div class="col-lg-6 col-12 mb-3">
 				<div class="card">
 					<img class="card-img-top" src="assets/images/clearout.jpg" alt="Card image cap">
 					<div class="card-body">
-						Pizza Delivery
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-12 mb-3">
-				<div class="card">
-					<img class="card-img-top" src="assets/images/clearout.jpg" alt="Card image cap">
-					<div class="card-body">
-						Boops
+						<h3>Boops</h3>
+						<p>An Instagram inspired, Intuitive and reactive Social Networking website dedicated for dog lovers.</p>
+						<p>Technologies used: HTML, CSS, Vue JS 2, Laravel 5, MySQL</p>
 					</div>
 				</div>
 			</div>
@@ -216,7 +222,8 @@
 	    <div class="row">
 	      <div class="col-lg-8 offset-lg-2 text-center">
 	        <h2 class="">Let's Get In Touch!</h2>
-	        <p class="mb-5">Ready to start your next project with me? That's great! Give me a call or send an email and I will get back to you as soon as possible!</p>
+
+	        <p class="mb-5">Do you want my service for your company? That's great! Give me a call or send an email and I will get back to you as soon as possible!</p>
 	      </div>
 	    </div>
 
@@ -228,7 +235,7 @@
 	      <div class="col-lg-4 mr-auto text-center">
 	        <i class="far fa-envelope fa-3x p-3"></i>
 	        <p>
-	          <a href="mailto:marklorenzed@gmail.com">marklorenzed@gmail.com</a>
+	          <a class="link" href="mailto:marklorenzed@gmail.com">marklorenzed@gmail.com</a>
 	        </p>
 	      </div>
 	    </div>
@@ -241,14 +248,23 @@
 
 
 
+	<footer>
+		<div class="container-fluid p-3">
+			<div class="text-center">Copyright © 2018 Mark Lorenze Dumalaon</div>
+		</div>
+		
+	</footer>
 
 
 
 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
 
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
